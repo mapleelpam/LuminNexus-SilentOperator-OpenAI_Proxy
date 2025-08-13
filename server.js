@@ -60,22 +60,6 @@ class SimpleOpenAIRealtimeProxy {
     }
     
     async verifyClient(info) {
-        // 🧪 TESTING MODE - JWT verification temporarily disabled
-        console.log('🧪 TEST MODE: Bypassing JWT verification for WebSocket connection testing');
-        console.log('🔗 WebSocket connection attempt from:', info.origin || 'unknown origin');
-        console.log('🌐 User-Agent:', info.req.headers['user-agent'] || 'unknown');
-        
-        // 附加測試用戶資訊
-        info.req.user = {
-            userId: 'test-user-' + Date.now(),
-            username: 'test-user',
-            email: 'test@example.com'
-        };
-        
-        console.log('✅ Test user authorized for WebSocket connection');
-        return true;
-        
-        /* ORIGINAL CODE - TEMPORARILY DISABLED
         try {
             // 提取並驗證 JWT token
             const token = this.extractToken(info.req);
@@ -114,7 +98,6 @@ class SimpleOpenAIRealtimeProxy {
             console.error('❌ WebSocket auth error:', error.message);
             return false;
         }
-        */
     }
     
     extractToken(req) {
