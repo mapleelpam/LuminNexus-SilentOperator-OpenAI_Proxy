@@ -1,0 +1,32 @@
+{
+  "name": "simple-openai-realtime-proxy",
+  "version": "1.0.0",
+  "description": "Simple OpenAI Realtime API WebSocket Proxy with Cognito JWT Authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "openai",
+    "realtime-api",
+    "websocket",
+    "proxy",
+    "cognito",
+    "jwt"
+  ],
+  "author": "Silent Operator Team",
+  "license": "MIT"
+}
